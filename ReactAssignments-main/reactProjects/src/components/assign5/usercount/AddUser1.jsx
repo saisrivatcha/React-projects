@@ -27,7 +27,7 @@ function AddUser1() {
   }
 
   return (
-    <div className="container mt-5 w-50">
+    <div className="container mt-5">
       <h2 className="display-5 text-dark bg-warning text-center fw-semibold">
         User Registration
       </h2>

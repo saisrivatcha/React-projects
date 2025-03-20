@@ -23,42 +23,43 @@ import UserProfile from './components/assign8/UserProfile';
 
 function App() {
   // Define routes BEFORE return statement
-  const browserRouterObject = createBrowserRouter([
-    {
-      path: "/",
-      element: <RootLayout />,
-      children: [
-        { path: "/", element: <Home /> },
-        { path: "signup", element: <Signup /> },
-        { path: "signin", element: <Signin /> },
-        {
-          path: "technologies",
-          element: <Technologies />,
-          children: [
-            { path: "reactjs", element: <Reactjs /> },
-            { path: "angular", element: <Angular /> },
-            { path: "vue", element: <Vue /> },
-            {path:"login",element:<Login/>},
-            {path: "user-profile",element: <UserProfile />  }
-          ],
-        },
-      ],
-    },
-  ]);
+  // const browserRouterObject = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: <RootLayout />,
+  //     children: [
+  //       { path: "/", element: <Home /> },
+  //       { path: "signup", element: <Signup /> },
+  //       { path: "signin", element: <Signin /> },
+  //       {
+  //         path: "technologies",
+  //         element: <Technologies />,
+  //         children: [
+  //           { path: "reactjs", element: <Reactjs /> },
+  //           { path: "angular", element: <Angular /> },
+  //           { path: "vue", element: <Vue /> },
+  //           {path:"login",element:<Login/>},
+  //           {path: "user-profile",element: <UserProfile />  }
+  //         ],
+  //       },
+  //     ],
+  //   },
+  // ]);
 
   return (
     <>
+    {/* uncomment the component to see other assignments*/}
       <Obj />
-      <Svg />
-      <Products />
-      <Array />
-      <Form1 />
-      <AddUser />
-      <AddUser1 />
-      <Parent />
+      {/* <Svg /> */}
+      {/* <Products /> */}
+      {/* <Array /> */}
+      {/* <Form1 /> */}
+      {/* <AddUser /> */}
+      {/* <AddUser1 /> */}
+      {/* <Parent /> */}
       
       {/* Provide router to the app */}
-      <RouterProvider router={browserRouterObject} />
+      {/* <RouterProvider router={browserRouterObject} /> */}
     </>
   );
 }

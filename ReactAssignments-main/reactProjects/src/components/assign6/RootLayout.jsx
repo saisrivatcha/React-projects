@@ -4,11 +4,11 @@ import { Outlet } from "react-router-dom";
 function RootLayout() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <div style={{ minHeight: "100vh" }} className="container">
         <Outlet />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

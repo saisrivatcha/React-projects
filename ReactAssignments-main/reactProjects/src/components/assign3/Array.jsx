@@ -1,32 +1,39 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 function Array() {
-    let [Numbers, setNumbers] = useState([20, 30, 40, 50]);
-    function handlesetNumbers_beg() {
-        setNumbers([10, ...Numbers])
+    const [numbers, setNumbers] = useState([20, 30, 40, 50]);
 
+    function handleSetNumbersBeg() {
+        setNumbers([10, ...numbers]);
     }
-    function handlesetNumbers_end() {
-        setNumbers([...Numbers, 60]);
+
+    function handleSetNumbersEnd() {
+        setNumbers([...numbers, 60]);
     }
-    function handlesetNumbers_middle() {
-        let copy = [...Numbers];
-        copy.splice(2, 0, 100);
+
+    function handleSetNumbersMiddle() {
+        let copy = [...numbers];
+        copy.splice(2, 0, 100); // Inserts 100 at index 2
         setNumbers(copy);
     }
+
     return (
         <div>
-          <h2>Assignment 3</h2>
-
-            {
-                Numbers.map(m => <p key={m}>{m}</p>)
-            }
-            <button className="btn btn-danger" onClick={handlesetNumbers_beg}>Change beg</button>
-            <button className="btn btn-danger" onClick={handlesetNumbers_end}>Change end</button>
-            <button className="btn btn-danger" onClick={handlesetNumbers_middle}>Change middle</button>
+            <h2>Assignment 3</h2>
+            {numbers.map((num, index) => (
+                <p key={index}>{num}</p> // Using index as a key to avoid duplicate issues
+            ))}
+            <button className="btn btn-danger m-2" onClick={handleSetNumbersBeg}>
+                Add to Beginning
+            </button>
+            <button className="btn btn-danger m-2" onClick={handleSetNumbersEnd}>
+                Add to End
+            </button>
+            <button className="btn btn-danger m-2" onClick={handleSetNumbersMiddle}>
+                Add to Middle
+            </button>
         </div>
-    )
+    );
 }
 
-export default Array
+export default Array;
